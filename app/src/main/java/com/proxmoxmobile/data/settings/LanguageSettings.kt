@@ -10,8 +10,9 @@ import java.util.Locale
 /**
  * In-app language selection.
  *
- * The app ships string resources for English (default), German, Spanish and
- * Simplified Chinese. By default it follows the system language; the user can
+ * The app ships string resources for English (default), German, Spanish,
+ * Simplified Chinese, French, Italian, Portuguese, Russian, Japanese and
+ * Korean. By default it follows the system language; the user can
  * override it on the login screen. The choice is stored in plain
  * SharedPreferences and applied by wrapping the activity base context in
  * [MainActivity.attachBaseContext], so it takes effect for the whole app and
@@ -22,7 +23,13 @@ enum class AppLanguage(val tag: String, val displayName: String) {
     SIMPLIFIED_CHINESE("zh-CN", "简体中文"),
     ENGLISH("en", "English"),
     GERMAN("de", "Deutsch"),
-    SPANISH("es", "Español");
+    SPANISH("es", "Español"),
+    FRENCH("fr", "Français"),
+    ITALIAN("it", "Italiano"),
+    PORTUGUESE("pt", "Português"),
+    RUSSIAN("ru", "Русский"),
+    JAPANESE("ja", "日本語"),
+    KOREAN("ko", "한국어");
 
     companion object {
         fun fromTag(tag: String?): AppLanguage =
