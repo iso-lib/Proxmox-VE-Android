@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App -->
-    <string name="app_name">Proxmox VE Mobile</string>
+    <string name="app_name">Proxmox VE Android</string>
     <string name="dialog_confirm">確認</string>
     <string name="dialog_cancel">キャンセル</string>
     <string name="common_yes">はい</string>
@@ -487,7 +487,7 @@
     <!-- ========================= SETTINGS ========================= -->
     <string name="settings_title">設定</string>
     <string name="settings_back">戻る</string>
-    <string name="settings_app_name">Proxmox VE Mobile</string>
+    <string name="settings_app_name">Proxmox VE Android</string>
     <string name="settings_app_version">バージョン %1$s</string>
     <string name="settings_app_tagline">Proxmox VE向けのモダンなAndroidクライアント</string>
     <string name="settings_section_display">表示</string>
@@ -518,7 +518,7 @@
     <string name="settings_clear_credentials_dialog_message">保存したログイン認証情報をすべて消去してもよろしいですか? 次回はもう一度入力する必要があります。</string>
     <string name="settings_clear_button">消去</string>
     <string name="settings_cancel_button">キャンセル</string>
-    <string name="settings_about_dialog_title">Proxmox VE Mobileについて</string>
+    <string name="settings_about_dialog_title">Proxmox VE Androidについて</string>
     <string name="settings_about_version">バージョン: %1$s</string>
     <string name="settings_about_build">ビルド: %1$d</string>
     <string name="settings_about_description">対応するProxmox Virtual Environmentのモバイルワークフロー向けのモダンなAndroidクライアントです。</string>

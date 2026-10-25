@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App -->
-    <string name="app_name">Proxmox VE Mobile</string>
+    <string name="app_name">Proxmox VE Android</string>
     <string name="dialog_confirm">확인</string>
     <string name="dialog_cancel">취소</string>
     <string name="common_yes">예</string>
@@ -487,7 +487,7 @@
     <!-- ========================= SETTINGS ========================= -->
     <string name="settings_title">설정</string>
     <string name="settings_back">뒤로</string>
-    <string name="settings_app_name">Proxmox VE Mobile</string>
+    <string name="settings_app_name">Proxmox VE Android</string>
     <string name="settings_app_version">버전 %1$s</string>
     <string name="settings_app_tagline">Proxmox VE용 최신 Android 클라이언트</string>
     <string name="settings_section_display">화면</string>
@@ -518,7 +518,7 @@
     <string name="settings_clear_credentials_dialog_message">저장된 모든 로그인 자격 증명을 지우시겠습니까? 다음에 다시 입력해야 합니다.</string>
     <string name="settings_clear_button">지우기</string>
     <string name="settings_cancel_button">취소</string>
-    <string name="settings_about_dialog_title">Proxmox VE Mobile 정보</string>
+    <string name="settings_about_dialog_title">Proxmox VE Android 정보</string>
     <string name="settings_about_version">버전: %1$s</string>
     <string name="settings_about_build">빌드: %1$d</string>
     <string name="settings_about_description">지원되는 Proxmox Virtual Environment 모바일 워크플로를 위한 최신 Android 클라이언트입니다.</string>

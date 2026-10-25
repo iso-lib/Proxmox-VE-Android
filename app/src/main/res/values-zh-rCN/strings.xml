@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App -->
-    <string name="app_name">Proxmox VE Mobile</string>
+    <string name="app_name">Proxmox VE Android</string>
     <string name="dialog_confirm">确定</string>
     <string name="dialog_cancel">取消</string>
     <string name="common_yes">是</string>
@@ -487,7 +487,7 @@
     <!-- ========================= SETTINGS ========================= -->
     <string name="settings_title">设置</string>
     <string name="settings_back">返回</string>
-    <string name="settings_app_name">Proxmox VE Mobile</string>
+    <string name="settings_app_name">Proxmox VE Android</string>
     <string name="settings_app_version">版本 %1$s</string>
     <string name="settings_app_tagline">适用于 Proxmox VE 的现代化 Android 客户端</string>
     <string name="settings_section_display">显示</string>
@@ -518,7 +518,7 @@
     <string name="settings_clear_credentials_dialog_message">确定要清除所有已保存的登录凭据吗？下次需要重新输入。</string>
     <string name="settings_clear_button">清除</string>
     <string name="settings_cancel_button">取消</string>
-    <string name="settings_about_dialog_title">关于 Proxmox VE Mobile</string>
+    <string name="settings_about_dialog_title">关于 Proxmox VE Android</string>
     <string name="settings_about_version">版本：%1$s</string>
     <string name="settings_about_build">构建：%1$d</string>
     <string name="settings_about_description">适用于 Proxmox Virtual Environment 移动工作流的现代化 Android 客户端。</string>

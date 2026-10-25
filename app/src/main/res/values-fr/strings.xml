@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App -->
-    <string name="app_name">Proxmox VE Mobile</string>
+    <string name="app_name">Proxmox VE Android</string>
     <string name="dialog_confirm">Confirmer</string>
     <string name="dialog_cancel">Annuler</string>
     <string name="common_yes">Oui</string>
@@ -487,7 +487,7 @@
     <!-- ========================= SETTINGS ========================= -->
     <string name="settings_title">Paramètres</string>
     <string name="settings_back">Retour</string>
-    <string name="settings_app_name">Proxmox VE Mobile</string>
+    <string name="settings_app_name">Proxmox VE Android</string>
     <string name="settings_app_version">Version %1$s</string>
     <string name="settings_app_tagline">Client Android moderne pour Proxmox VE</string>
     <string name="settings_section_display">Affichage</string>
@@ -518,7 +518,7 @@
     <string name="settings_clear_credentials_dialog_message">Voulez-vous vraiment effacer tous les identifiants enregistrés ? Vous devrez les saisir à nouveau la prochaine fois.</string>
     <string name="settings_clear_button">Effacer</string>
     <string name="settings_cancel_button">Annuler</string>
-    <string name="settings_about_dialog_title">À propos de Proxmox VE Mobile</string>
+    <string name="settings_about_dialog_title">À propos de Proxmox VE Android</string>
     <string name="settings_about_version">Version : %1$s</string>
     <string name="settings_about_build">Build : %1$d</string>
     <string name="settings_about_description">Un client Android moderne pour les flux de travail mobiles pris en charge de Proxmox Virtual Environment.</string>

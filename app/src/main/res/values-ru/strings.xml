@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App -->
-    <string name="app_name">Proxmox VE Mobile</string>
+    <string name="app_name">Proxmox VE Android</string>
     <string name="dialog_confirm">Подтвердить</string>
     <string name="dialog_cancel">Отмена</string>
     <string name="common_yes">Да</string>
@@ -487,7 +487,7 @@
     <!-- ========================= SETTINGS ========================= -->
     <string name="settings_title">Настройки</string>
     <string name="settings_back">Назад</string>
-    <string name="settings_app_name">Proxmox VE Mobile</string>
+    <string name="settings_app_name">Proxmox VE Android</string>
     <string name="settings_app_version">Версия %1$s</string>
     <string name="settings_app_tagline">Современный Android-клиент для Proxmox VE</string>
     <string name="settings_section_display">Отображение</string>
@@ -518,7 +518,7 @@
     <string name="settings_clear_credentials_dialog_message">Вы уверены, что хотите очистить все сохранённые данные входа? В следующий раз их придётся ввести снова.</string>
     <string name="settings_clear_button">Очистить</string>
     <string name="settings_cancel_button">Отмена</string>
-    <string name="settings_about_dialog_title">О Proxmox VE Mobile</string>
+    <string name="settings_about_dialog_title">О Proxmox VE Android</string>
     <string name="settings_about_version">Версия: %1$s</string>
     <string name="settings_about_build">Сборка: %1$d</string>
     <string name="settings_about_description">Современный Android-клиент для поддерживаемых мобильных рабочих процессов Proxmox Virtual Environment.</string>
