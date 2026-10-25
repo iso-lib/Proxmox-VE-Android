@@ -40,10 +40,6 @@ fun SettingsScreen(
     val autoRefreshInterval by AppSettings.refreshIntervalSeconds.collectAsState()
     val enableDarkMode by AppSettings.darkMode.collectAsState()
     val enableAutoLogin by AppSettings.autoLogin.collectAsState()
-    // Not implemented yet: biometric unlock and system notifications have
-    // no backing implementation, so these stay disabled rather than fake.
-    var enableNotifications by remember { mutableStateOf(true) }
-    var enableBiometric by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -146,15 +142,6 @@ fun SettingsScreen(
             item {
                 SettingsSection(title = stringResource(R.string.settings_section_security)) {
                     SettingsSwitchItem(
-                        icon = Icons.Default.Security,
-                        title = stringResource(R.string.settings_biometric_title),
-                        subtitle = stringResource(R.string.settings_biometric_subtitle),
-                        checked = enableBiometric,
-                        onCheckedChange = { enableBiometric = it },
-                        enabled = false
-                    )
-
-                    SettingsSwitchItem(
                         icon = Icons.AutoMirrored.Filled.Login,
                         title = stringResource(R.string.settings_auto_login_title),
                         subtitle = stringResource(R.string.settings_auto_login_subtitle),
@@ -167,20 +154,6 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_clear_credentials_title),
                         subtitle = stringResource(R.string.settings_clear_credentials_subtitle),
                         onClick = { showClearCredentialsDialog = true }
-                    )
-                }
-            }
-
-            // Notification Settings Section
-            item {
-                SettingsSection(title = stringResource(R.string.settings_section_notifications)) {
-                    SettingsSwitchItem(
-                        icon = Icons.Default.Notifications,
-                        title = stringResource(R.string.settings_enable_notifications_title),
-                        subtitle = stringResource(R.string.settings_enable_notifications_subtitle),
-                        checked = enableNotifications,
-                        onCheckedChange = { enableNotifications = it },
-                        enabled = false
                     )
                 }
             }
