@@ -1,3 +1,5 @@
+**English** | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
 # Proxmox-VE-Android
 
 > 本项目源自上游 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)，以独立新项目重新建库，不再是该上游的 fork。在上游代码基础上，本项目包含：简体中文全量翻译、登录页语言切换、列表卡片折叠与界面调整、LXC/VM 控制台（WebView）等改动。
@@ -58,6 +60,13 @@ The app ships string resources for these locales:
 - Default (`values`): English
 - `values-de`: German
 - `values-es`: Spanish
+- `values-zh-rCN`: Simplified Chinese
+- `values-fr`: French
+- `values-it`: Italian
+- `values-pt`: Portuguese
+- `values-ru`: Russian
+- `values-ja`: Japanese
+- `values-ko`: Korean
 
 Localization is resource-based through Android `strings.xml` files. New locale additions should preserve string names, placeholders, format specifiers, and escaping so translations remain behaviorally identical to the default resources.
 
