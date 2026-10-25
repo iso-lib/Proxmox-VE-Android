@@ -27,6 +27,7 @@ import com.proxmoxmobile.data.security.CertificateFingerprint
 import com.proxmoxmobile.data.security.CredentialAuthMethod
 import com.proxmoxmobile.data.security.SavedCredentials
 import com.proxmoxmobile.data.settings.AppLanguage
+import com.proxmoxmobile.data.settings.AppSettings
 import com.proxmoxmobile.data.settings.LanguageSettings
 import com.proxmoxmobile.presentation.viewmodel.MainViewModel
 import androidx.compose.ui.text.font.FontWeight
@@ -61,7 +62,10 @@ fun LoginScreen(
     var apiTokenId by rememberSaveable { mutableStateOf("") }
     var apiTokenSecret by remember { mutableStateOf("") }
     var hasLoadedSavedCredentials by remember { mutableStateOf(false) }
-    
+    var hasSavedCredentialsForAutoLogin by remember { mutableStateOf(false) }
+    var autoLoginAttempted by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+
     val isLoading by viewModel.isLoading.collectAsState()
     val errorMessage by viewModel.errorMessage.collectAsState()
     val isAuthenticated by viewModel.isAuthenticated.collectAsState()
@@ -93,6 +97,7 @@ fun LoginScreen(
                 useApiToken = savedCredentials.authMethod == CredentialAuthMethod.API_TOKEN
                 apiTokenId = savedCredentials.apiTokenId
                 apiTokenSecret = savedCredentials.apiTokenSecret
+                hasSavedCredentialsForAutoLogin = true
             } else if (
                 saveCredentials &&
                 savedCredentialsMatchNonSecretLoginDraft(
@@ -170,6 +175,21 @@ fun LoginScreen(
         }
     }
     
+    // Auto-login, once per login-screen visit: only when the switch in
+    // Settings is on and the form was just filled from saved credentials.
+    // Turning the switch off never deletes saved credentials; it only
+    // stops this automatic submit, so the form still pre-fills.
+    // A failed attempt does not retry: the user can edit and submit manually.
+    LaunchedEffect(hasSavedCredentialsForAutoLogin, autoLoginAttempted) {
+        if (!hasSavedCredentialsForAutoLogin || autoLoginAttempted) {
+            return@LaunchedEffect
+        }
+        autoLoginAttempted = true
+        if (!isAuthenticated && !isLoading && AppSettings.getAutoLogin(context) && canSubmit) {
+            submitLogin()
+        }
+    }
+
     // Navigate to dashboard when authenticated
     LaunchedEffect(isAuthenticated) {
         if (isAuthenticated) {

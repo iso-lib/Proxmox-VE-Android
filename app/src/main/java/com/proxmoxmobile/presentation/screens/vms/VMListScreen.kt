@@ -34,6 +34,7 @@ import com.proxmoxmobile.data.model.VirtualMachine
 import com.proxmoxmobile.presentation.navigation.Screen
 import com.proxmoxmobile.presentation.navigation.taskDetailRouteForNotice
 import com.proxmoxmobile.presentation.viewmodel.MainViewModel
+import com.proxmoxmobile.data.settings.AppSettings
 import kotlinx.coroutines.launch
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.CircleShape
@@ -98,10 +99,11 @@ fun VMListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
-    LaunchedEffect(nodeName, vmListViewModel) {
+    val refreshIntervalSeconds by AppSettings.refreshIntervalSeconds.collectAsState()
+    LaunchedEffect(nodeName, vmListViewModel, refreshIntervalSeconds) {
         vmListViewModel.loadVirtualMachines()
         while (!nodeName.isNullOrBlank()) {
-            delay(15000) // Refresh every 15 seconds for VMs
+            delay(refreshIntervalSeconds * 1000L)
             vmListViewModel.loadVirtualMachines(showLoading = false)
         }
     }

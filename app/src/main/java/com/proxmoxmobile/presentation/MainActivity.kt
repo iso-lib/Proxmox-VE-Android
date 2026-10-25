@@ -3,7 +3,6 @@ package com.proxmoxmobile.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -19,6 +18,7 @@ import com.proxmoxmobile.presentation.viewmodel.MainViewModel
 import android.content.Context
 import com.proxmoxmobile.data.model.ServerConfig
 import com.proxmoxmobile.data.security.CredentialAuthMethod
+import com.proxmoxmobile.data.settings.AppSettings
 import com.proxmoxmobile.data.settings.LanguageSettings
 
 class MainActivity : ComponentActivity() {
@@ -29,10 +29,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
-        
+        AppSettings.initialize(applicationContext)
+
         setContent {
             val navController = rememberNavController()
             val viewModel: MainViewModel = viewModel()
+            val darkMode by AppSettings.darkMode.collectAsState()
             
             LaunchedEffect(viewModel) {
                 viewModel.initialize(applicationContext)
@@ -65,7 +67,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             
-            ProxmoxTheme {
+            ProxmoxTheme(darkTheme = darkMode) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background

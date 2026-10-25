@@ -26,6 +26,7 @@ import com.proxmoxmobile.data.lxc.ProxmoxLxcApi
 import com.proxmoxmobile.data.model.Container
 import com.proxmoxmobile.data.model.LxcSnapshot
 import com.proxmoxmobile.presentation.viewmodel.MainViewModel
+import com.proxmoxmobile.data.settings.AppSettings
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -114,10 +115,11 @@ fun ContainerListScreen(
     )
     val uiState by lxcListViewModel.uiState.collectAsState()
 
-    LaunchedEffect(nodeName, lxcListViewModel) {
+    val refreshIntervalSeconds by AppSettings.refreshIntervalSeconds.collectAsState()
+    LaunchedEffect(nodeName, lxcListViewModel, refreshIntervalSeconds) {
         lxcListViewModel.loadContainers()
         while (!nodeName.isNullOrBlank()) {
-            delay(15000) // Refresh every 15 seconds for containers
+            delay(refreshIntervalSeconds * 1000L)
             lxcListViewModel.loadContainers(showLoading = false)
         }
     }

@@ -100,6 +100,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlinx.coroutines.delay
+import com.proxmoxmobile.data.settings.AppSettings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -151,11 +152,12 @@ fun TaskScreen(
     val uiState by taskListViewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    LaunchedEffect(taskListViewModel, uiState.selectedNode) {
+    val refreshIntervalSeconds by AppSettings.refreshIntervalSeconds.collectAsState()
+    LaunchedEffect(taskListViewModel, uiState.selectedNode, refreshIntervalSeconds) {
         val selectedNode = uiState.selectedNode
         taskListViewModel.loadTasks()
         while (!selectedNode.isNullOrBlank()) {
-            delay(10000)
+            delay(refreshIntervalSeconds * 1000L)
             taskListViewModel.loadTasks(showLoading = false)
         }
     }

@@ -20,7 +20,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.ui.platform.LocalContext
+import android.content.Intent
+import android.net.Uri
 import com.proxmoxmobile.BuildConfig
+import com.proxmoxmobile.data.settings.AppSettings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -28,13 +32,18 @@ fun SettingsScreen(
     navController: NavController,
     viewModel: MainViewModel
 ) {
+    val context = LocalContext.current
     var showClearCredentialsDialog by remember { mutableStateOf(false) }
     var showAboutDialog by remember { mutableStateOf(false) }
-    var autoRefreshInterval by remember { mutableStateOf(30) } // seconds
+    // Persisted settings: these flows survive leaving the screen and are
+    // read by the theme, the list screens, and the login screen.
+    val autoRefreshInterval by AppSettings.refreshIntervalSeconds.collectAsState()
+    val enableDarkMode by AppSettings.darkMode.collectAsState()
+    val enableAutoLogin by AppSettings.autoLogin.collectAsState()
+    // Not implemented yet: biometric unlock and system notifications have
+    // no backing implementation, so these stay disabled rather than fake.
     var enableNotifications by remember { mutableStateOf(true) }
     var enableBiometric by remember { mutableStateOf(false) }
-    var enableAutoLogin by remember { mutableStateOf(viewModel.hasSavedCredentials()) }
-    var enableDarkMode by remember { mutableStateOf(true) }
 
     Scaffold(
         topBar = {
@@ -113,8 +122,7 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_dark_mode_title),
                         subtitle = stringResource(R.string.settings_dark_mode_subtitle),
                         checked = enableDarkMode,
-                        onCheckedChange = { enableDarkMode = it },
-                        enabled = false
+                        onCheckedChange = { AppSettings.setDarkMode(context, it) }
                     )
                 }
             }
@@ -127,10 +135,9 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_refresh_interval_title),
                         subtitle = stringResource(R.string.settings_refresh_interval_subtitle, autoRefreshInterval),
                         value = autoRefreshInterval.toFloat(),
-                        onValueChange = { autoRefreshInterval = it.toInt() },
+                        onValueChange = { AppSettings.setRefreshIntervalSeconds(context, it.toInt()) },
                         valueRange = 10f..60f,
-                        steps = 5,
-                        enabled = false
+                        steps = 4
                     )
                 }
             }
@@ -152,8 +159,7 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_auto_login_title),
                         subtitle = stringResource(R.string.settings_auto_login_subtitle),
                         checked = enableAutoLogin,
-                        onCheckedChange = { enableAutoLogin = it },
-                        enabled = false
+                        onCheckedChange = { AppSettings.setAutoLogin(context, it) }
                     )
 
                     SettingsButtonItem(
@@ -193,8 +199,14 @@ fun SettingsScreen(
                         icon = Icons.Default.BugReport,
                         title = stringResource(R.string.settings_report_bug_title),
                         subtitle = stringResource(R.string.settings_report_bug_subtitle),
-                        onClick = {},
-                        enabled = false
+                        onClick = {
+                            context.startActivity(
+                                Intent(
+                                    Intent.ACTION_VIEW,
+                                    Uri.parse("https://github.com/iso-lib/Proxmox-VE-Android/issues")
+                                )
+                            )
+                        }
                     )
                 }
             }
@@ -229,7 +241,8 @@ fun SettingsScreen(
                 TextButton(
                     onClick = {
                         viewModel.clearSavedCredentials()
-                        enableAutoLogin = false
+                        // No saved credentials left, so auto-login must go off too.
+                        AppSettings.setAutoLogin(context, false)
                         showClearCredentialsDialog = false
                     }
                 ) {

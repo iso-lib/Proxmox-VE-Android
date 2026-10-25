@@ -26,6 +26,7 @@ import com.proxmoxmobile.data.dashboard.DashboardRepository
 import com.proxmoxmobile.data.dashboard.ProxmoxDashboardApi
 import com.proxmoxmobile.data.dashboard.ProxmoxDashboardTaskSummarySource
 import com.proxmoxmobile.data.model.Node
+import com.proxmoxmobile.data.settings.AppSettings
 import com.proxmoxmobile.data.task.ProxmoxTaskApi
 import com.proxmoxmobile.data.task.TaskRepository
 import com.proxmoxmobile.data.task.TaskSummary
@@ -80,11 +81,12 @@ fun DashboardScreen(
     val uiState by dashboardViewModel.uiState.collectAsState()
     val nodes = uiState.nodes
 
-    // Real-time data refresh
-    LaunchedEffect(dashboardViewModel) {
+    // Real-time data refresh, at the interval chosen in Settings.
+    val refreshIntervalSeconds by AppSettings.refreshIntervalSeconds.collectAsState()
+    LaunchedEffect(dashboardViewModel, refreshIntervalSeconds) {
         dashboardViewModel.loadDashboard()
         while (true) {
-            delay(30000) // Refresh every 30 seconds
+            delay(refreshIntervalSeconds * 1000L)
             if (viewModel.isAuthenticated.value) {
                 dashboardViewModel.loadDashboard(showLoading = false)
             }
