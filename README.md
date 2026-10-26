@@ -4,9 +4,21 @@
 
 > This project originates from the upstream 5p00kyy/Proxmox-VE-Mobile and has been rebuilt as an independent new project, no longer a fork of the upstream. Based on the upstream code, this project includes: full translation into Simplified Chinese, language switching on the login page, list card folding and interface adjustments, LXC/VM console (WebView), and other modifications.
 
-`Proxmox VE Mobile` is an Android client for browsing and operating a Proxmox VE environment from a phone or tablet.
+`Proxmox VE Android` is an Android client for browsing and operating a Proxmox VE environment from a phone or tablet.
 
 The current beta line is focused on common mobile operator workflows: login, secure connection handling, dashboard visibility, node navigation, VM/LXC lifecycle actions, task follow-up, and read-only infrastructure inspection. It is a single-module Kotlin/Jetpack Compose app that is moving from screen-owned Retrofit calls toward repository-backed feature slices. This README describes the repository as it exists today rather than the intended end state.
+
+## What's new in 1.0.0
+
+Compared with the first beta, 1.0.0 is the first stable release: [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0).
+
+- **First stable release.** Version 1.0.0 (versionCode 4), distributed through GitHub Releases and signed with the project's release key. Future releases are published automatically when a version tag (`v*`) is pushed.
+- **Guest console.** A lightweight WebView console for LXC guests (xterm.js) and VM guests (noVNC), loading Proxmox's own console pages; password sessions authenticate with a session ticket cookie.
+- **Settings that work.** Dark/light theme, a refresh interval of 10–60 seconds for the dashboard, VM, container and task lists, auto-login with saved credentials, and a Report Bug link to GitHub Issues. The biometric and notification switches were placeholders with no implementation behind them, so they were removed.
+- **Localization.** The app is translated into 10 languages: English, German, Spanish, Simplified Chinese, French, Italian, Portuguese, Russian, Japanese and Korean. This README is available in 7 languages.
+- **Interface refinements.** Collapsible list cards, a compact system-status card (CPU, used/total memory, uptime), horizontal quick actions, a language switcher on the login screen, and tidier VM/LXC detail actions.
+- **Login and TLS.** HTTPS normalization for host/IP input, a first-use trust flow for self-signed certificates with SHA-256 fingerprint pinning, and password or API-token login.
+- **New name.** Renamed from Proxmox VE Mobile to Proxmox VE Android: the app name, the settings header and the About dialog.
 
 ## Beta Release
 

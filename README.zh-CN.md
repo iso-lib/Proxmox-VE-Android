@@ -4,9 +4,21 @@
 
 > 本项目源自上游 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)，以独立新项目重新建库，不再是该上游的 fork。在上游代码基础上，本项目包含：简体中文全量翻译、登录页语言切换、列表卡片折叠与界面调整、LXC/VM 控制台（WebView）等改动。
 
-`Proxmox VE Mobile` 是一款 Android 客户端，可在手机或平板上浏览和操作 Proxmox VE 环境。
+`Proxmox VE Android` 是一款 Android 客户端，可在手机或平板上浏览和操作 Proxmox VE 环境。
 
 当前 beta 版本聚焦于常见的移动端运维流程：登录、安全连接处理、仪表盘可见性、节点导航、VM/LXC 生命周期操作、任务跟进，以及只读的基础设施查看。这是一个单模块的 Kotlin/Jetpack Compose 应用，正在从“界面自带 Retrofit 调用”向“以仓库（repository）为支撑的功能切片”演进。本 README 描述的是仓库当前实际状态，而非最终目标形态。
+
+## 1.0.0 更新内容
+
+与首个 Beta 版相比，1.0.0 是第一个正式版：[1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0)。
+
+- **首个正式版。** 版本 1.0.0（versionCode 4），通过 GitHub Releases 分发，使用项目正式签名。今后推送版本标签（`v*`）时会自动发布新版。
+- **虚拟机/容器控制台。** 轻量 WebView 控制台：LXC 用 xterm.js、虚拟机用 noVNC，直接加载 Proxmox 自带的控制台页面；密码登录会话用会话 ticket Cookie 认证。
+- **真正可用的设置。** 深色/浅色主题、仪表盘/虚拟机/容器/任务列表 10–60 秒刷新间隔、已保存账号自动登录，以及跳转到 GitHub Issues 的反馈问题入口。生物识别和通知开关背后没有任何实现、只是占位，已删除。
+- **本地化。** 应用已翻译为 10 种语言：英语、德语、西班牙语、简体中文、法语、意大利语、葡萄牙语、俄语、日语、韩语。本 README 提供 7 种语言版本。
+- **界面打磨。** 列表卡片可折叠、系统状态卡更紧凑（CPU、已用/总内存、运行时间）、快捷操作横排、登录页可切换语言、虚拟机/容器详情操作更规整。
+- **登录与 TLS。** 主机/IP 输入自动规范为 HTTPS、自签名证书首次使用信任流程并以 SHA-256 指纹固定、支持密码或 API 令牌登录。
+- **新名称。** 由 Proxmox VE Mobile 更名为 Proxmox VE Android：应用名、设置页顶部与关于对话框同步改名。
 
 ## Beta 发布
 

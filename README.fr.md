@@ -4,9 +4,21 @@
 
 > Ce projet est issu de l'amont [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile), recréé en tant que nouveau projet indépendant, et non plus comme un fork de cet amont. Par rapport au code amont, ce projet comprend : la traduction complète en chinois simplifié, le changement de langue sur la page de connexion, le repli des cartes de liste et des ajustements d'interface, la console LXC/VM (WebView), ainsi que d'autres modifications.
 
-`Proxmox VE Mobile` est un client Android permettant de consulter et de piloter un environnement Proxmox VE depuis un téléphone ou une tablette.
+`Proxmox VE Android` est un client Android permettant de consulter et de piloter un environnement Proxmox VE depuis un téléphone ou une tablette.
 
 La ligne bêta actuelle se concentre sur les flux de travail courants d'un opérateur mobile : connexion, gestion des connexions sécurisées, visibilité du tableau de bord, navigation entre les nœuds, actions de cycle de vie des VM/LXC, suivi des tâches et inspection en lecture seule de l'infrastructure. Il s'agit d'une application Kotlin/Jetpack Compose à module unique, qui évolue d'appels Retrofit appartenant aux écrans vers des tranches fonctionnelles adossées à des dépôts. Ce README décrit le dépôt tel qu'il existe aujourd'hui, et non l'état final visé.
+
+## Nouveautés de la version 1.0.0
+
+Par rapport à la première bêta, la 1.0.0 est la première version stable : [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0).
+
+- **Première version stable.** Version 1.0.0 (versionCode 4), distribuée via GitHub Releases et signée avec la clé de publication du projet. Les versions futures seront publiées automatiquement dès qu'une étiquette de version (`v*`) sera poussée.
+- **Console des invités.** Une console WebView légère pour les invités LXC (xterm.js) et VM (noVNC), qui charge les pages de console propres à Proxmox ; les sessions par mot de passe s'authentifient avec un cookie de ticket de session.
+- **Paramètres qui fonctionnent.** Thème sombre/clair, intervalle d'actualisation de 10 à 60 secondes pour les listes du tableau de bord, des VM, des conteneurs et des tâches, connexion automatique avec les identifiants enregistrés et un lien « Signaler un problème » vers GitHub Issues. Les interrupteurs biométrique et de notifications n'étaient que des espaces réservés sans implémentation, ils ont donc été supprimés.
+- **Localisation.** L'application est traduite en 10 langues : anglais, allemand, espagnol, chinois simplifié, français, italien, portugais, russe, japonais et coréen. Ce README est disponible en 7 langues.
+- **Améliorations de l'interface.** Cartes de liste repliables, carte d'état système compacte (CPU, mémoire utilisée/totale, durée de fonctionnement), actions rapides horizontales, sélecteur de langue sur l'écran de connexion et actions de détail VM/LXC plus ordonnées.
+- **Connexion et TLS.** Normalisation HTTPS pour la saisie hôte/IP, flux de confiance à la première utilisation pour les certificats auto-signés avec épinglage d'empreinte SHA-256, et connexion par mot de passe ou jeton d'API.
+- **Nouveau nom.** Renommé de Proxmox VE Mobile en Proxmox VE Android : nom de l'application, en-tête des paramètres et boîte de dialogue À propos.
 
 ## Version bêta
 
