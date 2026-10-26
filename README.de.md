@@ -49,19 +49,13 @@ Installieren Sie nur APKs, die an die GitHub Releases dieses Repositorys angehä
 
 ## Screenshots
 
-Screenshots und kurze Bildschirmaufnahmen sind für `v0.1.0-beta.1` nützlich, sollten aber weggelassen werden, wenn keine öffentlich unbedenklichen Aufnahmen verfügbar sind. Gute Aufnahmen umfassen:
+Screenshots aus Version 1.0.0.
 
-- Anmeldung mit sichtbaren TLS-/Fingerprint-Steuerelementen und unkritischem Beispiel-Hosttext.
-- Dashboard nur mit allgemeinen oder wegwerfbaren Laborressourcen.
-- VM-Liste/-Details und LXC-Liste/-Details mit wegwerfbaren Gastnamen.
-- Aufgabendetails/-protokolle mit UPIDs, Benutzernamen, Knotennamen, IPs und unkenntlich gemachten sensiblen Protokollwerten oder Aufnahmen aus einem Wegwerflabor.
-- Einen schreibgeschützten Verwaltungsbereich wie Speicher, Netzwerk, Benutzer, Backups oder Cluster mit bereinigten Beispieldaten.
-
-Veröffentlichen Sie keine Screenshots, die private Hostnamen, öffentliche oder private IP-Adressen, Benutzernamen, Backup-Notizen, Aufgabenprotokolle mit Umgebungsdetails, API-Token, Tickets, Cookies, Fingerprints, die an einen privaten Server gebunden sind, oder Desktop-/benutzerspezifische Pfade offenlegen. Wenn keine bereinigten echten Screenshots verfügbar sind, verwenden Sie ein wegwerfbares Proxmox-Labor oder lassen Sie Screenshots weg, bis öffentlich unbedenkliche Medien aufgenommen werden können.
-
-Unbedenkliche Beispiele umfassen Platzhalter-Hosttext, allgemeine Knotennamen wie `pve-demo`, wegwerfbare Gastnamen wie `demo-vm-101`, unkenntlich gemachte UPIDs sowie Speicher- oder Clusteransichten aus einem Wegwerflabor.
-
-Bevor Sie Screenshots oder Aufnahmen an ein GitHub Release anhängen, erfassen Sie ein öffentliches Medienmanifest in den Versionshinweisen oder in [`docs/beta-smoke-qa.md`](docs/beta-smoke-qa.md). Das Manifest sollte für jede Datei den Dateinamen, den Bildschirm oder Arbeitsablauf, den Quelltyp, die verwendeten bereinigten Kennungen, die Beschriftung oder den Alternativtext sowie den QA-Status auflisten. Geeignete Dateinamen als Kandidaten sind `login-tls.png`, `dashboard.png`, `vm-detail.png`, `lxc-detail.png`, `task-detail.png` und `read-only-admin.png`.
+| Anmeldung | Dashboard |
+| --- | --- |
+| ![Anmeldung](docs/screenshots/login.jpg) | ![Dashboard](docs/screenshots/dashboard.jpg) |
+| LXC-Container | Speicher |
+| ![LXC-Container](docs/screenshots/lxc-containers.jpg) | ![Speicher](docs/screenshots/storage.jpg) |
 
 ## Lokalisierung
 

@@ -49,19 +49,13 @@
 
 ## 截图
 
-截图和短录屏对 `v0.1.0-beta.1` 很有用，但如果没有公开安全的截图素材，就应当省略。合适的截图包括：
+以下截图来自 1.0.0 版本。
 
-- 登录界面，可见 TLS/指纹控件，使用无敏感信息的示例主机文本。
-- 仪表盘，仅使用通用或一次性的实验资源。
-- VM 列表/详情和 LXC 列表/详情，使用一次性的客户机名称。
-- 任务详情/日志，其中 UPID、用户名、节点名、IP 以及敏感日志值已打码，或取自一次性实验环境。
-- 一个只读的管理切片，例如存储、网络、用户、备份或集群，使用经过脱敏的示例数据。
-
-不要发布会泄露以下信息的截图：私有主机名、公网或内网 IP 地址、用户名、备份备注、带有环境细节的任务日志、API 令牌、ticket、Cookie、与私有服务器绑定的指纹，或桌面/用户专属路径。如果没有经过脱敏的真实截图，请使用一次性的 Proxmox 实验环境，或者先省略截图，直到能拿到公开安全的素材。
-
-安全的示例包括：占位主机文本、通用的节点名如 `pve-demo`、一次性的客户机名如 `demo-vm-101`、已打码的 UPID，以及来自一次性实验环境的存储或集群视图。
-
-在向 GitHub Release 附加截图或录屏之前，请在 release 说明或 [`docs/beta-smoke-qa.md`](docs/beta-smoke-qa.md) 中记录一份公开媒体清单。清单应列出每个文件名、对应界面或流程、来源类型、使用过的脱敏标识、说明或替代文本，以及 QA 状态。合适的候选文件名有 `login-tls.png`、`dashboard.png`、`vm-detail.png`、`lxc-detail.png`、`task-detail.png` 和 `read-only-admin.png`。
+| 登录页 | 仪表盘 |
+| --- | --- |
+| ![登录页](docs/screenshots/login.jpg) | ![仪表盘](docs/screenshots/dashboard.jpg) |
+| LXC 容器 | 存储 |
+| ![LXC 容器](docs/screenshots/lxc-containers.jpg) | ![存储](docs/screenshots/storage.jpg) |
 
 ## 本地化
 

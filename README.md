@@ -49,19 +49,13 @@ Only install APKs attached to this repository's GitHub Releases. Debug APKs and 
 
 ## Screenshots
 
-Screenshots and short screen recordings are useful for `v0.1.0-beta.1`, but they should be omitted if public-safe captures are not available. Good captures include:
+Screenshots from version 1.0.0.
 
-- Login with the TLS/fingerprint controls visible, using non-sensitive sample host text.
-- Dashboard with generic or disposable lab resources only.
-- VM list/detail and LXC list/detail with disposable guest names.
-- Task detail/logs with UPIDs, usernames, node names, IPs, and sensitive log values redacted or captured from a throwaway lab.
-- One read-only admin slice such as storage, network, users, backups, or cluster, using sanitized sample data.
-
-Do not publish screenshots that reveal private hostnames, public or private IP addresses, usernames, backup notes, task logs with environment details, API tokens, tickets, cookies, fingerprints tied to a private server, or desktop/user-specific paths. If sanitized real screenshots are not available, use a disposable Proxmox lab or omit screenshots until public-safe media can be captured.
-
-Safe examples include placeholder host text, generic node names such as `pve-demo`, disposable guest names such as `demo-vm-101`, redacted UPIDs, and storage or cluster views from a throwaway lab.
-
-Before attaching screenshots or recordings to a GitHub Release, record a public media manifest in the release notes or [`docs/beta-smoke-qa.md`](docs/beta-smoke-qa.md). The manifest should list each filename, screen or workflow, source type, sanitized identifiers used, caption or alt text, and QA status. Good candidate filenames are `login-tls.png`, `dashboard.png`, `vm-detail.png`, `lxc-detail.png`, `task-detail.png`, and `read-only-admin.png`.
+| Login | Dashboard |
+| --- | --- |
+| ![Login](docs/screenshots/login.jpg) | ![Dashboard](docs/screenshots/dashboard.jpg) |
+| LXC containers | Storage |
+| ![LXC containers](docs/screenshots/lxc-containers.jpg) | ![Storage](docs/screenshots/storage.jpg) |
 
 ## Localization
 

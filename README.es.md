@@ -49,19 +49,13 @@ Instala únicamente APK adjuntos a las GitHub Releases de este repositorio. Los 
 
 ## Capturas de pantalla
 
-Las capturas de pantalla y las grabaciones cortas de pantalla son útiles para `v0.1.0-beta.1`, pero deben omitirse si no se dispone de capturas seguras para publicar. Buenas capturas incluyen:
+Capturas de pantalla de la versión 1.0.0.
 
-- Inicio de sesión con los controles TLS/de huella visibles, usando texto de host de ejemplo no sensible.
-- Panel de control solo con recursos de laboratorio genéricos o desechables.
-- Lista/detalle de VM y lista/detalle de LXC con nombres de invitados desechables.
-- Detalle/registros de tareas con UPID, nombres de usuario, nombres de nodo, IP y valores sensibles de registros redactados o capturados desde un laboratorio desechable.
-- Una sección de administración de solo lectura, como almacenamiento, red, usuarios, copias de seguridad o clúster, usando datos de ejemplo depurados.
-
-No publiques capturas que revelen nombres de host privados, direcciones IP públicas o privadas, nombres de usuario, notas de copias de seguridad, registros de tareas con detalles del entorno, tokens de API, tickets, cookies, huellas vinculadas a un servidor privado ni rutas de escritorio o específicas de un usuario. Si no se dispone de capturas reales depuradas, usa un laboratorio Proxmox desechable u omite las capturas hasta que se puedan obtener medios seguros para publicar.
-
-Ejemplos seguros incluyen texto de host de marcador de posición, nombres de nodo genéricos como `pve-demo`, nombres de invitados desechables como `demo-vm-101`, UPID redactados y vistas de almacenamiento o clúster procedentes de un laboratorio desechable.
-
-Antes de adjuntar capturas o grabaciones a una GitHub Release, registra un manifiesto de medios público en las notas de la versión o en [`docs/beta-smoke-qa.md`](docs/beta-smoke-qa.md). El manifiesto debe enumerar cada nombre de archivo, pantalla o flujo de trabajo, tipo de origen, identificadores depurados utilizados, texto de título o alternativo, y estado de control de calidad. Buenos nombres de archivo candidatos son `login-tls.png`, `dashboard.png`, `vm-detail.png`, `lxc-detail.png`, `task-detail.png` y `read-only-admin.png`.
+| Inicio de sesión | Panel de control |
+| --- | --- |
+| ![Inicio de sesión](docs/screenshots/login.jpg) | ![Panel de control](docs/screenshots/dashboard.jpg) |
+| Contenedores LXC | Almacenamiento |
+| ![Contenedores LXC](docs/screenshots/lxc-containers.jpg) | ![Almacenamiento](docs/screenshots/storage.jpg) |
 
 ## Localización
 

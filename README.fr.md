@@ -49,19 +49,13 @@ Installez uniquement les APK joints aux GitHub Releases de ce dépôt. Les APK d
 
 ## Captures d'écran
 
-Les captures d'écran et les courts enregistrements d'écran sont utiles pour `v0.1.0-beta.1`, mais ils doivent être omis si aucune capture sûre pour la publication n'est disponible. Parmi les bonnes captures figurent :
+Captures d'écran de la version 1.0.0.
 
-- La connexion avec les contrôles TLS/empreinte visibles, en utilisant un texte d'hôte d'exemple non sensible.
-- Le tableau de bord avec uniquement des ressources de laboratoire génériques ou jetables.
-- Les listes/détails de VM et les listes/détails de LXC avec des noms d'invités jetables.
-- Les détails/journaux de tâches avec des UPID, des noms d'utilisateur, des noms de nœuds, des IP et des valeurs de journal sensibles expurgés, ou capturés depuis un laboratoire jetable.
-- Une tranche d'administration en lecture seule, comme le stockage, le réseau, les utilisateurs, les sauvegardes ou le cluster, en utilisant des données d'exemple assainies.
-
-Ne publiez pas de captures d'écran révélant des noms d'hôtes privés, des adresses IP publiques ou privées, des noms d'utilisateur, des notes de sauvegarde, des journaux de tâches contenant des détails d'environnement, des jetons d'API, des tickets, des cookies, des empreintes liées à un serveur privé, ou des chemins propres à un bureau ou à un utilisateur. Si aucune capture réelle assainie n'est disponible, utilisez un laboratoire Proxmox jetable ou omettez les captures d'écran jusqu'à ce que des médias sûrs pour la publication puissent être capturés.
-
-Parmi les exemples sûrs figurent un texte d'hôte fictif, des noms de nœuds génériques tels que `pve-demo`, des noms d'invités jetables tels que `demo-vm-101`, des UPID expurgés, ainsi que des vues de stockage ou de cluster issues d'un laboratoire jetable.
-
-Avant de joindre des captures d'écran ou des enregistrements à une GitHub Release, consignez un manifeste de médias publics dans les notes de version ou dans [`docs/beta-smoke-qa.md`](docs/beta-smoke-qa.md). Le manifeste doit énumérer chaque nom de fichier, l'écran ou le flux de travail, le type de source, les identifiants assainis utilisés, la légende ou le texte alternatif, et l'état de la QA. Parmi les noms de fichiers candidats figurent `login-tls.png`, `dashboard.png`, `vm-detail.png`, `lxc-detail.png`, `task-detail.png` et `read-only-admin.png`.
+| Connexion | Tableau de bord |
+| --- | --- |
+| ![Connexion](docs/screenshots/login.jpg) | ![Tableau de bord](docs/screenshots/dashboard.jpg) |
+| Conteneurs LXC | Stockage |
+| ![Conteneurs LXC](docs/screenshots/lxc-containers.jpg) | ![Stockage](docs/screenshots/storage.jpg) |
 
 ## Localisation
 
