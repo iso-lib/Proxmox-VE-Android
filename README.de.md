@@ -2,7 +2,7 @@
 
 # Proxmox-VE-Android
 
-> Dieses Projekt stammt vom Upstream-Projekt [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile), wurde aber als eigenständiges neues Projekt neu angelegt und ist kein Fork dieses Upstream-Projekts mehr. Auf Basis des Upstream-Codes enthält dieses Projekt unter anderem: eine vollständige Übersetzung ins Vereinfachte Chinesisch, eine Sprachauswahl auf der Anmeldeseite, einklappbare Listenkarten und Anpassungen der Benutzeroberfläche sowie eine LXC/VM-Konsole (WebView).
+> Dieses Projekt stammt vom Upstream-Projekt [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile), wurde aber als eigenständiges neues Projekt neu angelegt und ist kein Fork dieses Upstream-Projekts mehr. Auf Basis des Upstream-Codes enthält dieses Projekt: Übersetzungen in 10 Sprachen (Englisch, Deutsch, Spanisch, Vereinfachtes Chinesisch, Französisch, Italienisch, Portugiesisch, Russisch, Japanisch und Koreanisch) mit einer Sprachauswahl auf der Anmeldeseite; Oberflächenverbesserungen wie einklappbare Listenkarten, eine kompakte Systemstatus-Karte, horizontale Schnellaktionen und aufgeräumte VM-/LXC-Detailaktionen; eine schlanke WebView-Gastkonsole für LXC-Gäste (xterm.js) und VM-Gäste (noVNC); funktionierende Einstellungen für dunkles/helles Design, Aktualisierungsintervall, automatische Anmeldung und Problemmeldungen; eine formal signierte stabile Version 1.0.0, die über GitHub Releases verteilt wird und deren Nachfolger bei Push eines Versions-Tags automatisch veröffentlicht werden; sowie die Umbenennung der App in Proxmox VE Android.
 
 `Proxmox VE Android` ist ein Android-Client, mit dem eine Proxmox-VE-Umgebung von einem Smartphone oder Tablet aus durchsucht und bedient werden kann.
 

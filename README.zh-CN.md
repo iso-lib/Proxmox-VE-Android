@@ -2,7 +2,7 @@
 
 # Proxmox-VE-Android
 
-> 本项目源自上游 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)，以独立新项目重新建库，不再是该上游的 fork。在上游代码基础上，本项目包含：简体中文全量翻译、登录页语言切换、列表卡片折叠与界面调整、LXC/VM 控制台（WebView）等改动。
+> 本项目源自上游 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)，以独立新项目重新建库，不再是该上游的 fork。在上游代码基础上，本项目包含：10 种语言翻译（英语、德语、西班牙语、简体中文、法语、意大利语、葡萄牙语、俄语、日语、韩语）及登录页语言切换；界面打磨，包括列表卡片折叠、紧凑的系统状态卡、横排快捷操作和更规整的虚拟机/容器详情操作；轻量 WebView 访客控制台，LXC 用 xterm.js、虚拟机用 noVNC；真正可用的设置，包括深浅色主题、刷新间隔、自动登录和反馈问题入口；经正式签名的 1.0.0 正式版，通过 GitHub Releases 分发，今后推送版本标签时自动发布新版；以及应用更名为 Proxmox VE Android。
 
 `Proxmox VE Android` 是一款 Android 客户端，可在手机或平板上浏览和操作 Proxmox VE 环境。
 

@@ -2,7 +2,7 @@
 
 # Proxmox-VE-Android
 
-> 본 프로젝트는 업스트림 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)에서 파생되었으며, 독립적인 새 프로젝트로 저장소를 새로 만들었고 더 이상 해당 업스트림의 fork이 아닙니다. 업스트림 코드를 기반으로, 본 프로젝트에는 중국어 간체 전체 번역, 로그인 화면 언어 전환, 목록 카드 접기 및 인터페이스 조정, LXC/VM 콘솔(WebView) 등의 변경 사항이 포함되어 있습니다.
+> 본 프로젝트는 업스트림 [5p00kyy/Proxmox-VE-Mobile](https://github.com/5p00kyy/Proxmox-VE-Mobile)에서 파생되었으며, 독립적인 새 프로젝트로 저장소를 새로 만들었고 더 이상 해당 업스트림의 fork이 아닙니다. 업스트림 코드를 기반으로, 본 프로젝트에는 다음이 포함됩니다: 10개 언어 번역(영어, 독일어, 스페인어, 간체 중국어, 프랑스어, 이탈리아어, 포르투갈어, 러시아어, 일본어, 한국어) 및 로그인 화면 언어 전환, 접을 수 있는 목록 카드·간결한 시스템 상태 카드·가로 퀵 액션·정리된 VM/LXC 세부 작업 등의 인터페이스 개선, LXC 게스트(xterm.js)와 VM 게스트(noVNC)를 위한 가벼운 WebView 게스트 콘솔, 다크/라이트 테마·새로 고침 간격·자동 로그인·문제 보고 등 실제로 동작하는 설정, GitHub Releases로 배포되는 정식 서명된 안정 버전 1.0.0(앞으로는 버전 태그 푸시 시 자동 릴리스), 그리고 Proxmox VE Android로의 이름 변경。
 
 `Proxmox VE Android`은 휴대폰이나 태블릿에서 Proxmox VE 환경을 탐색하고 운영하기 위한 Android 클라이언트입니다.
 
