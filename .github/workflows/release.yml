@@ -1,17 +1,23 @@
 name: Release APK
 
-# Formal signed release build. Triggered manually only, so no release is
-# produced by an ordinary push. Requires these repository secrets, the same
-# names the beta workflow uses:
+# Formal signed release build. Triggered by pushing a version tag (v*,
+# e.g. v1.0.1) or manually. A tag push builds, signs, and publishes a
+# GitHub Release with the APK attached; a manual dispatch only uploads
+# the build artifact and does not create a release. Ordinary branch
+# pushes do not trigger this workflow. Requires these repository secrets,
+# the same names the beta workflow uses:
 #   ANDROID_RELEASE_KEYSTORE_BASE64
 #   ANDROID_RELEASE_KEYSTORE_PASSWORD
 #   ANDROID_RELEASE_KEY_ALIAS
 #   ANDROID_RELEASE_KEY_PASSWORD
 on:
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -111,3 +117,22 @@ jobs:
           name: proxmox-ve-android-release
           path: release-artifacts/*.apk
           if-no-files-found: error
+
+      # Tag pushes only: publish a GitHub Release with the signed APK.
+      # Uses the built-in GITHUB_TOKEN, so no PAT or extra secret is
+      # needed. Re-pushing an existing tag uploads the APK to the
+      # existing release instead of failing on a duplicate release.
+      - name: Publish GitHub release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          asset="release-artifacts/proxmox-ve-android-${tag}.apk"
+          cp release-artifacts/proxmox-ve-android-release.apk "$asset"
+          sha256sum "$asset"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "$asset" --clobber
+          else
+            gh release create "$tag" --title "$tag" --generate-notes "$asset"
+          fi
