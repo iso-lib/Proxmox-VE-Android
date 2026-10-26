@@ -6,7 +6,7 @@
 
 `Proxmox VE Android` is an Android client for browsing and operating a Proxmox VE environment from a phone or tablet.
 
-The current beta line is focused on common mobile operator workflows: login, secure connection handling, dashboard visibility, node navigation, VM/LXC lifecycle actions, task follow-up, and read-only infrastructure inspection. It is a single-module Kotlin/Jetpack Compose app that is moving from screen-owned Retrofit calls toward repository-backed feature slices. This README describes the repository as it exists today rather than the intended end state.
+The current stable release (1.0.0) is focused on common mobile operator workflows: login, secure connection handling, dashboard visibility, node navigation, VM/LXC lifecycle actions, task follow-up, and read-only infrastructure inspection. It is a single-module Kotlin/Jetpack Compose app that is moving from screen-owned Retrofit calls toward repository-backed feature slices. This README describes the repository as it exists today rather than the intended end state.
 
 ## What's new in 1.0.0
 
@@ -97,7 +97,6 @@ What appears to work from code inspection:
 What is clearly incomplete or only partially implemented:
 
 - Some screens remain placeholders or read-only while planned workflows are built deliberately.
-- Some settings are local UI state only and are not persisted or wired into runtime behavior.
 - Advanced actions such as node reboot/shutdown/shell, backup mutation, user mutation, VM console/configuration editing, and container detail resource/console operations are outside the first beta scope.
 - Backup, user, settings, and LXC-detail controls that are outside beta scope are disabled or labeled read-only rather than presented as working.
 - The explicit insecure TLS fallback is debug-only; SHA-256 certificate fingerprint pinning is available for self-signed servers and should be preferred.
@@ -105,9 +104,8 @@ What is clearly incomplete or only partially implemented:
 
 ## Known Limitations
 
-These limitations are expected for `v0.1.0-beta.1` and should be reflected in release notes:
+These limitations apply to 1.0.0 and should be reflected in release notes:
 
-- Guest console access is outside first beta scope.
 - VM and LXC configuration editing is outside first beta scope.
 - Snapshot create, delete, and rollback are outside first beta scope.
 - Backup create, restore, download, and delete are outside first beta scope.

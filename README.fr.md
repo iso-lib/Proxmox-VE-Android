@@ -6,7 +6,7 @@
 
 `Proxmox VE Android` est un client Android permettant de consulter et de piloter un environnement Proxmox VE depuis un téléphone ou une tablette.
 
-La ligne bêta actuelle se concentre sur les flux de travail courants d'un opérateur mobile : connexion, gestion des connexions sécurisées, visibilité du tableau de bord, navigation entre les nœuds, actions de cycle de vie des VM/LXC, suivi des tâches et inspection en lecture seule de l'infrastructure. Il s'agit d'une application Kotlin/Jetpack Compose à module unique, qui évolue d'appels Retrofit appartenant aux écrans vers des tranches fonctionnelles adossées à des dépôts. Ce README décrit le dépôt tel qu'il existe aujourd'hui, et non l'état final visé.
+La version stable actuelle (1.0.0) se concentre sur les flux de travail courants d'un opérateur mobile : connexion, gestion des connexions sécurisées, visibilité du tableau de bord, navigation entre les nœuds, actions de cycle de vie des VM/LXC, suivi des tâches et inspection en lecture seule de l'infrastructure. Il s'agit d'une application Kotlin/Jetpack Compose à module unique, qui évolue d'appels Retrofit appartenant aux écrans vers des tranches fonctionnelles adossées à des dépôts. Ce README décrit le dépôt tel qu'il existe aujourd'hui, et non l'état final visé.
 
 ## Nouveautés de la version 1.0.0
 
@@ -97,7 +97,6 @@ Ce qui semble fonctionner, d'après l'inspection du code :
 Ce qui est manifestement incomplet ou seulement partiellement implémenté :
 
 - Certains écrans restent des espaces réservés ou en lecture seule pendant que les flux de travail prévus sont construits délibérément.
-- Certains paramètres ne sont qu'un état d'interface local et ne sont ni persistés ni reliés au comportement d'exécution.
 - Les actions avancées telles que le redémarrage/l'arrêt/l'interpréteur de commandes d'un nœud, la mutation des sauvegardes, la mutation des utilisateurs, l'édition de la console/configuration des VM et les opérations de ressources/console des détails de conteneurs sont hors du périmètre de la première bêta.
 - Les contrôles de sauvegarde, d'utilisateur, de paramètres et de détails LXC qui sont hors du périmètre de la bêta sont désactivés ou étiquetés en lecture seule plutôt que présentés comme fonctionnels.
 - La solution de repli TLS non sécurisée explicite est réservée au débogage ; l'épinglage de l'empreinte de certificat SHA-256 est disponible pour les serveurs auto-signés et doit être préféré.
@@ -105,9 +104,8 @@ Ce qui est manifestement incomplet ou seulement partiellement implémenté :
 
 ## Limitations connues
 
-Ces limitations sont attendues pour `v0.1.0-beta.1` et doivent être reflétées dans les notes de version :
+Ces limitations s'appliquent à la version 1.0.0 et doivent être reflétées dans les notes de version :
 
-- L'accès à la console des invités est hors du périmètre de la première bêta.
 - L'édition de la configuration des VM et des LXC est hors du périmètre de la première bêta.
 - La création, la suppression et la restauration des instantanés sont hors du périmètre de la première bêta.
 - La création, la restauration, le téléchargement et la suppression des sauvegardes sont hors du périmètre de la première bêta.

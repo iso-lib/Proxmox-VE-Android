@@ -6,7 +6,7 @@
 
 `Proxmox VE Android` ist ein Android-Client, mit dem eine Proxmox-VE-Umgebung von einem Smartphone oder Tablet aus durchsucht und bedient werden kann.
 
-Die aktuelle Beta-Linie konzentriert sich auf gängige mobile Arbeitsabläufe für Betreiber: Anmeldung, sichere Verbindungsverwaltung, Dashboard-Übersicht, Knoten-Navigation, VM-/LXC-Lebenszyklusaktionen, Aufgabenverfolgung und schreibgeschützte Infrastrukturansicht. Es handelt sich um eine einmodulige Kotlin/Jetpack-Compose-App, die von bildschirmgebundenen Retrofit-Aufrufen zu repositorygestützten Funktionsbereichen übergeht. Diese README beschreibt das Repository in seinem heutigen Zustand und nicht den angestrebten Endzustand.
+Die aktuelle stabile Version (1.0.0) konzentriert sich auf gängige mobile Arbeitsabläufe für Betreiber: Anmeldung, sichere Verbindungsverwaltung, Dashboard-Übersicht, Knoten-Navigation, VM-/LXC-Lebenszyklusaktionen, Aufgabenverfolgung und schreibgeschützte Infrastrukturansicht. Es handelt sich um eine einmodulige Kotlin/Jetpack-Compose-App, die von bildschirmgebundenen Retrofit-Aufrufen zu repositorygestützten Funktionsbereichen übergeht. Diese README beschreibt das Repository in seinem heutigen Zustand und nicht den angestrebten Endzustand.
 
 ## Neu in 1.0.0
 
@@ -97,7 +97,6 @@ Was nach Codeprüfung zu funktionieren scheint:
 Was eindeutig unvollständig oder nur teilweise umgesetzt ist:
 
 - Einige Bildschirme bleiben Platzhalter oder schreibgeschützt, während geplante Arbeitsabläufe bewusst schrittweise aufgebaut werden.
-- Einige Einstellungen sind nur lokaler UI-Zustand und werden nicht gespeichert oder in Laufzeitverhalten eingebunden.
 - Erweiterte Aktionen wie Knoten-Neustart/-Herunterfahren/-Shell, Backup-Änderungen, Benutzeränderungen, VM-Konsolen-/Konfigurationsbearbeitung sowie Containerdetail-Ressourcen-/Konsolenoperationen liegen außerhalb des Umfangs der ersten Beta.
 - Backup-, Benutzer-, Einstellungs- und LXC-Detail-Steuerelemente, die außerhalb des Beta-Umfangs liegen, sind deaktiviert oder als schreibgeschützt gekennzeichnet, statt als funktionierend dargestellt zu werden.
 - Der explizite unsichere TLS-Fallback ist nur für Debug-Builds vorgesehen; das Pinning eines SHA-256-Zertifikatsfingerabdrucks steht für selbstsignierte Server zur Verfügung und sollte bevorzugt werden.
@@ -105,9 +104,8 @@ Was eindeutig unvollständig oder nur teilweise umgesetzt ist:
 
 ## Bekannte Einschränkungen
 
-Diese Einschränkungen werden für `v0.1.0-beta.1` erwartet und sollten in den Versionshinweisen berücksichtigt werden:
+Diese Einschränkungen gelten für 1.0.0 und sollten in den Versionshinweisen berücksichtigt werden:
 
-- Der Gastkonsolenzugriff liegt außerhalb des Umfangs der ersten Beta.
 - Die Bearbeitung von VM- und LXC-Konfigurationen liegt außerhalb des Umfangs der ersten Beta.
 - Das Erstellen, Löschen und Zurücksetzen von Snapshots liegt außerhalb des Umfangs der ersten Beta.
 - Das Erstellen, Wiederherstellen, Herunterladen und Löschen von Backups liegt außerhalb des Umfangs der ersten Beta.

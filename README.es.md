@@ -6,7 +6,7 @@
 
 `Proxmox VE Android` es un cliente Android para explorar y operar un entorno Proxmox VE desde un teléfono o una tableta.
 
-La línea beta actual se centra en los flujos de trabajo habituales de un operador móvil: inicio de sesión, gestión de conexiones seguras, visibilidad del panel de control, navegación por nodos, acciones del ciclo de vida de VM/LXC, seguimiento de tareas e inspección de infraestructura de solo lectura. Es una aplicación de un solo módulo en Kotlin/Jetpack Compose que está pasando de llamadas Retrofit propias de cada pantalla a secciones de funcionalidades respaldadas por repositorios. Este README describe el repositorio tal como existe hoy, no el estado final previsto.
+La versión estable actual (1.0.0) se centra en los flujos de trabajo habituales de un operador móvil: inicio de sesión, gestión de conexiones seguras, visibilidad del panel de control, navegación por nodos, acciones del ciclo de vida de VM/LXC, seguimiento de tareas e inspección de infraestructura de solo lectura. Es una aplicación de un solo módulo en Kotlin/Jetpack Compose que está pasando de llamadas Retrofit propias de cada pantalla a secciones de funcionalidades respaldadas por repositorios. Este README describe el repositorio tal como existe hoy, no el estado final previsto.
 
 ## Novedades de la versión 1.0.0
 
@@ -97,7 +97,6 @@ Lo que parece funcionar según la inspección del código:
 Lo que está claramente incompleto o solo parcialmente implementado:
 
 - Algunas pantallas siguen siendo marcadores de posición o de solo lectura mientras los flujos de trabajo previstos se construyen deliberadamente.
-- Algunos ajustes son solo estado de interfaz local y no se conservan ni se conectan con el comportamiento en tiempo de ejecución.
 - Las acciones avanzadas como reinicio/apagado/terminal de nodo, mutación de copias de seguridad, mutación de usuarios, edición de consola/configuración de VM y operaciones de recursos/consola de detalle de contenedor están fuera del alcance de la primera beta.
 - Los controles de copias de seguridad, usuarios, ajustes y detalle de LXC que están fuera del alcance de la beta están deshabilitados o etiquetados como de solo lectura, en lugar de presentarse como funcionales.
 - La alternativa explícita de TLS inseguro es solo para depuración; la fijación de huella de certificado SHA-256 está disponible para servidores autofirmados y debe preferirse.
@@ -105,9 +104,8 @@ Lo que está claramente incompleto o solo parcialmente implementado:
 
 ## Limitaciones conocidas
 
-Se espera que estas limitaciones existan en `v0.1.0-beta.1` y deben reflejarse en las notas de la versión:
+Estas limitaciones se aplican a la versión 1.0.0 y deben reflejarse en las notas de la versión:
 
-- El acceso a la consola de invitados está fuera del alcance de la primera beta.
 - La edición de configuración de VM y LXC está fuera del alcance de la primera beta.
 - La creación, eliminación y reversión de instantáneas están fuera del alcance de la primera beta.
 - La creación, restauración, descarga y eliminación de copias de seguridad están fuera del alcance de la primera beta.
