@@ -20,34 +20,32 @@ Im Vergleich zur ersten Beta ist 1.0.0 die erste stabile Version: [1.0.0](https:
 - **Anmeldung und TLS.** HTTPS-Normalisierung für Host-/IP-Eingaben, ein Vertrauensdialog bei erster Verwendung für selbstsignierte Zertifikate mit SHA-256-Fingerprint-Pinning sowie Anmeldung per Passwort oder API-Token.
 - **Neuer Name.** Umbenannt von Proxmox VE Mobile in Proxmox VE Android: App-Name, Kopfzeile der Einstellungen und Info-Dialog.
 
-## Beta-Version
+## Veröffentlichung
 
-Die geplante erste offizielle Beta ist `v0.1.0-beta.1`.
+Die aktuelle stabile Version ist [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0) (versionCode 4). Die Änderungen seit der ersten Beta stehen oben unter [Neu in 1.0.0](#neu-in-100).
 
-Vertriebsplan:
+Vertrieb:
 
-- GitHub Releases werden der erste Download-Weg für die Beta sein.
-- Die Beta-APK wird an das Release angehängt, sobald die automatisierten Prüfungen und die Smoke-QA der ersten Beta bestanden sind.
-- Die Paketierung für den Play Store und F-Droid wird bis nach der ersten GitHub-Beta zurückgestellt.
+- GitHub Releases ist der Download-Weg; an jede Version ist die signierte APK angehängt.
+- Künftige Versionen werden automatisch veröffentlicht, sobald ein Versions-Tag (`v*`) gepusht wird.
+- Die Paketierung für den Play Store und F-Droid wird zurückgestellt.
 
-Unterstützte Umgebungsziele für die erste Beta:
+Unterstützte Umgebungsziele:
 
 - Android API 24 oder neuer.
 - Proxmox VE 8.x ist das primäre Smoke-Test-Ziel.
 - Eigenständige Knoten und kleine Cluster sind im Umfang enthalten.
-- Die Verwaltung von Proxmox Backup Server ist für die erste Beta nicht im Umfang enthalten.
+- Die Verwaltung von Proxmox Backup Server ist nicht im Umfang enthalten.
 
-### Installieren einer Beta-APK
+### Installieren der APK
 
-Wenn `v0.1.0-beta.1` veröffentlicht wird:
-
-1. Öffnen Sie das GitHub Release für das Beta-Tag.
-2. Laden Sie die angehängte `proxmox-ve-mobile-v0.1.0-beta.1-release.apk` herunter.
-3. Bestätigen Sie, dass die Versionshinweise die APK als signierten Beta-Build ausweisen.
+1. Öffnen Sie das GitHub Release für `1.0.0`.
+2. Laden Sie die angehängte `proxmox-ve-android-1.0.0.apk` herunter.
+3. Bestätigen Sie, dass die Versionshinweise die APK als signierten stabilen Build ausweisen.
 4. Erlauben Sie unter Android die Installation aus dem Browser oder Dateimanager, mit dem Sie die APK heruntergeladen haben.
 5. Öffnen Sie die APK und folgen Sie der Android-Installationsaufforderung.
 
-Installieren Sie nur APKs, die an die GitHub Releases dieses Repositorys angehängt sind. Debug-APKs und unsignierte Workflow-Artefakte dienen nur der Projektvalidierung und sollten nicht als öffentliche Beta-Downloads behandelt werden.
+Installieren Sie nur APKs, die an die GitHub Releases dieses Repositorys angehängt sind. Debug-APKs und unsignierte Workflow-Artefakte dienen nur der Projektvalidierung und sollten nicht als öffentliche Downloads behandelt werden.
 
 ## Screenshots
 

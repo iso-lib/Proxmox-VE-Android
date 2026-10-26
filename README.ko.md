@@ -20,34 +20,32 @@
 - **로그인 및 TLS.** 호스트/IP 입력의 HTTPS 정규화, 자체 서명 인증서의 최초 사용 신뢰 흐름과 SHA-256 지문 고정, 비밀번호 또는 API 토큰 로그인.
 - **새 이름.** Proxmox VE Mobile에서 Proxmox VE Android로 이름이 변경되었습니다: 앱 이름, 설정 화면 헤더, 정보 대화상자.
 
-## 베타 릴리스
+## 릴리스
 
-계획된 첫 공식 베타는 `v0.1.0-beta.1`입니다.
+현재 안정 버전은 [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0)(versionCode 4)입니다. 첫 베타 버전 이후의 변경 사항은 위의 [1.0.0의 새로운 기능](#100의-새로운-기능)을 참조하십시오.
 
-배포 계획:
+배포:
 
-- GitHub Releases가 첫 베타 다운로드 경로가 됩니다.
-- 베타 APK는 자동화된 게이트와 첫 베타 스모크 QA를 통과하면 릴리스에 첨부됩니다.
-- Play Store와 F-Droid 패키징은 첫 GitHub 베타 이후로 미뤄집니다.
+- GitHub Releases가 다운로드 경로이며, 각 릴리스에는 서명된 APK가 첨부됩니다.
+- 앞으로 버전 태그(`v*`)를 푸시하면 자동으로 릴리스됩니다.
+- Play Store와 F-Droid 패키징은 미뤄집니다.
 
-첫 베타의 지원 환경 목표:
+지원 환경 목표:
 
 - Android API 24 이상.
 - Proxmox VE 8.x가 주요 스모크 테스트 대상입니다.
 - 독립 실행형 노드와 소규모 클러스터가 범위에 포함됩니다.
-- Proxmox Backup Server 관리는 첫 베타 범위에서 제외됩니다.
+- Proxmox Backup Server 관리는 범위에서 제외됩니다.
 
-### 베타 APK 설치
+### APK 설치
 
-`v0.1.0-beta.1`이 게시되면:
-
-1. 해당 베타 태그의 GitHub Release를 엽니다.
-2. 첨부된 `proxmox-ve-mobile-v0.1.0-beta.1-release.apk`를 다운로드합니다.
-3. 릴리스 노트에서 해당 APK가 서명된 베타 빌드임이 명시되어 있는지 확인합니다.
+1. `1.0.0`에 해당하는 GitHub Release를 엽니다.
+2. 첨부된 `proxmox-ve-android-1.0.0.apk`를 다운로드합니다.
+3. 릴리스 노트에서 해당 APK가 서명된 안정 버전 빌드임이 명시되어 있는지 확인합니다.
 4. Android에서 APK를 다운로드하는 데 사용한 브라우저나 파일 관리자로부터의 설치를 허용합니다.
 5. APK를 열고 Android 설치 안내를 따릅니다.
 
-이 저장소의 GitHub Releases에 첨부된 APK만 설치하십시오. 디버그 APK와 서명되지 않은 워크플로 아티팩트는 프로젝트 검증용일 뿐이며 공개 베타 다운로드로 취급해서는 안 됩니다.
+이 저장소의 GitHub Releases에 첨부된 APK만 설치하십시오. 디버그 APK와 서명되지 않은 워크플로 아티팩트는 프로젝트 검증용일 뿐이며 공개 다운로드로 취급해서는 안 됩니다.
 
 ## 스크린샷
 

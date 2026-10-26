@@ -20,34 +20,32 @@
 - **登录与 TLS。** 主机/IP 输入自动规范为 HTTPS、自签名证书首次使用信任流程并以 SHA-256 指纹固定、支持密码或 API 令牌登录。
 - **新名称。** 由 Proxmox VE Mobile 更名为 Proxmox VE Android：应用名、设置页顶部与关于对话框同步改名。
 
-## Beta 发布
+## 正式版
 
-计划中的第一个正式 beta 是 `v0.1.0-beta.1`。
+当前正式版是 [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0)（versionCode 4）。与首个 Beta 版相比的改动见上文 [1.0.0 更新内容](#100-更新内容)。
 
-发布计划：
+分发方式：
 
-- GitHub Releases 将是第一个 beta 的下载渠道。
-- 在自动化门禁和首个 beta 冒烟 QA 通过后，beta APK 会附加到 release 中。
-- Play Store 和 F-Droid 的打包将推迟到第一个 GitHub beta 之后。
+- GitHub Releases 是下载渠道，每个 release 都附带已签名的 APK。
+- 今后推送版本标签（`v*`）时会自动发布新版。
+- Play Store 和 F-Droid 的打包暂缓。
 
-第一个 beta 支持的环境目标：
+支持的环境目标：
 
 - Android API 24 或更高版本。
 - Proxmox VE 8.x 是主要的冒烟测试目标。
 - 独立节点和小型集群在范围内。
-- 第一个 beta 不包含 Proxmox Backup Server 的管理功能。
+- Proxmox Backup Server 的管理功能不在范围内。
 
-### 安装 Beta APK
+### 安装 APK
 
-当 `v0.1.0-beta.1` 发布时：
-
-1. 打开该 beta 标签对应的 GitHub Release。
-2. 下载附加的 `proxmox-ve-mobile-v0.1.0-beta.1-release.apk`。
-3. 确认 release 说明中注明该 APK 为已签名的 beta 构建。
+1. 打开 `1.0.0` 对应的 GitHub Release。
+2. 下载附加的 `proxmox-ve-android-1.0.0.apk`。
+3. 确认 release 说明中注明该 APK 为已签名的正式版构建。
 4. 在 Android 上，允许你用来下载 APK 的浏览器或文件管理器安装应用。
 5. 打开 APK 并按 Android 的安装提示操作。
 
-只安装本仓库 GitHub Releases 中附加的 APK。Debug APK 和未签名的 workflow 产物仅用于项目验证，不应被视为公开的 beta 下载。
+只安装本仓库 GitHub Releases 中附加的 APK。Debug APK 和未签名的 workflow 产物仅用于项目验证，不应被视为公开下载。
 
 ## 截图
 

@@ -20,34 +20,32 @@ Compared with the first beta, 1.0.0 is the first stable release: [1.0.0](https:/
 - **Login and TLS.** HTTPS normalization for host/IP input, a first-use trust flow for self-signed certificates with SHA-256 fingerprint pinning, and password or API-token login.
 - **New name.** Renamed from Proxmox VE Mobile to Proxmox VE Android: the app name, the settings header and the About dialog.
 
-## Beta Release
+## Release
 
-The planned first official beta is `v0.1.0-beta.1`.
+The current stable release is [1.0.0](https://github.com/iso-lib/Proxmox-VE-Android/releases/tag/v1.0.0) (versionCode 4). See [What's new in 1.0.0](#whats-new-in-100) above for the changes since the first beta.
 
-Distribution plan:
+Distribution:
 
-- GitHub Releases will be the first beta download path.
-- The beta APK will be attached to the release once automated gates and first-beta smoke QA pass.
-- Play Store and F-Droid packaging are deferred until after the first GitHub beta.
+- GitHub Releases is the download path; the signed APK is attached to each release.
+- Future releases are published automatically when a version tag (`v*`) is pushed.
+- Play Store and F-Droid packaging are deferred.
 
-Supported environment targets for the first beta:
+Supported environment targets:
 
 - Android API 24 or newer.
 - Proxmox VE 8.x is the primary smoke-test target.
 - Standalone nodes and small clusters are in scope.
-- Proxmox Backup Server management is not in scope for the first beta.
+- Proxmox Backup Server management is not in scope.
 
-### Installing A Beta APK
+### Installing The APK
 
-When `v0.1.0-beta.1` is published:
-
-1. Open the GitHub Release for the beta tag.
-2. Download the attached `proxmox-ve-mobile-v0.1.0-beta.1-release.apk`.
-3. Confirm the release notes identify the APK as a signed beta build.
+1. Open the GitHub Release for `1.0.0`.
+2. Download the attached `proxmox-ve-android-1.0.0.apk`.
+3. Confirm the release notes identify the APK as a signed stable build.
 4. On Android, allow installation from the browser or file manager you used to download the APK.
 5. Open the APK and follow the Android install prompt.
 
-Only install APKs attached to this repository's GitHub Releases. Debug APKs and unsigned workflow artifacts are for project validation only and should not be treated as public beta downloads.
+Only install APKs attached to this repository's GitHub Releases. Debug APKs and unsigned workflow artifacts are for project validation only and should not be treated as public downloads.
 
 ## Screenshots
 
